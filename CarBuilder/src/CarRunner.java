@@ -1,20 +1,28 @@
-
+import java.util.Scanner; 
 public class CarRunner 
 {
 
 	public static void main(String[] args) 
 		{
-		Car [] car = new Car [3]; 
-		car[0] = new Utility(); 
-		car[1] = new Performance(); 
-		car[2] = new Standard();
+		whatType(); 
+		}
+	public static void whatType() 
+		{
+		System.out.println("What type of car do you want to build. Performance, Utility, Standard.");
+		Scanner scanner = new Scanner(System.in); 
+		String answer = scanner.next(); 
 		
-		for(int i = 0; i < car.length; i++) 
+		if(answer.equalsIgnoreCase("Performance")) 
 			{
-				car[i].car();
-				car[i].components();
-				car[i].myTurbo.turbo(); 
+			Performance.makePerformance();
+			}
+		if(answer.equalsIgnoreCase("Utility")) 
+			{
+			Utility.makeUtility();
+			}
+		if(answer.equalsIgnoreCase("Standard")) 
+			{
+			Standard.makeStandard();
 			}
 		}
-
 }

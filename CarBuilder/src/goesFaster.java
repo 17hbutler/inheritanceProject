@@ -1,5 +1,5 @@
 
-public class goesFaster implements isTurbo
+public class goesFaster implements isTurbo 
 {
 	public void turbo() 
 		{

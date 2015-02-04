@@ -9,6 +9,10 @@ public class Standard extends Car
 		wheels = "Goodyear"; 
 		engine = "3 cylinder";
 		
-		myTurbo = (isTurbo) new doesNotGoFaster(); 
+		myTurbo = (isTurbo) new goesFaster(); 
+		}
+	public static void makeStandard() 
+		{
+		
 		}
 }
