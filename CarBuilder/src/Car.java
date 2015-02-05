@@ -4,7 +4,7 @@ import java.io.*;
 import javax.swing.*;
 public abstract class Car 
 {
-	protected String make; 
+	protected static String make; 
 	protected String model; 
 	protected int year; 
 	protected String wheels; 
