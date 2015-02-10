@@ -8,7 +8,16 @@ public abstract class Car
 	protected static String model; 
 	protected static String wheels; 
 	protected static String engine;
+	protected static powerBehavior myPowerBehavior; 
 	
+	public void whatType() 
+		{
+		
+		}
+	public void makePerformance() 
+		{
+		
+		}
 	public void whatMake() 
 		{
 		System.out.println("This car has a make.");
