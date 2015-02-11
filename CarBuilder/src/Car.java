@@ -8,7 +8,8 @@ public abstract class Car
 	protected static String model; 
 	protected static String wheels; 
 	protected static String engine;
-	protected static powerBehavior myPowerBehavior; 
+	protected static int XP = 0; 
+	protected static String isFaster; 
 	
 	public void whatType() 
 		{

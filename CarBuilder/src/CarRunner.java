@@ -10,7 +10,8 @@ public class CarRunner
 		for(int i = 0; i < car.length; i++) 
 			{
 			car[i].whatType();
-			car[i].whatEngine(); 
+			car[i].whatEngine();
+			car[i].whatWheels(); 
 			}
 		}
 	

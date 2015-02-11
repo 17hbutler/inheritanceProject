@@ -29,6 +29,101 @@ public class Performance extends Car
 			whatType();
 			}
 	}
+	public static void turbo() 
+		{
+		System.out.println("Do you want your engine turbo charged or super charged.");
+		System.out.println("Turbo Charged input 1.");
+		System.out.println("Super Charged input 2.");
+		Scanner scanner = new Scanner(System.in); 
+		String turbo = scanner.next();
+		if(turbo.equals("1")) 
+			{
+			System.out.println("Your " + make + " " + model + " is now turbocharged");
+			isFaster = "turbocharged";
+			switch(engine) 
+				{
+				case("V8"): 
+					{
+					XP += 10; 
+					break; 
+					}
+				case("Straight Six"): 
+					{
+					XP += 20; 
+					break; 
+					}
+				case("V6"): 
+					{
+					XP += 10; 
+					break; 
+					}
+				case("Inline 4"): 
+					{
+					XP += 25; 
+					break; 
+					}
+				case("Boxer"): 
+					{
+					XP += 30; 
+					break; 
+					}
+				case("V12"): 
+					{
+					XP += 5; 
+					break; 
+					}
+				case("V10"): 
+					{
+					XP += 5; 
+					break; 
+					}
+				}
+			}
+		else 
+			{
+			System.out.println("Your " + make + " " + model + " is now supercharged");
+			isFaster = "supercharged";
+			switch(engine) 
+				{
+				case("V8"): 
+					{
+					XP += 20; 
+					break; 
+					}
+				case("Straight Six"): 
+					{
+					XP += 10; 
+					break; 
+					}
+				case("V6"): 
+					{
+					XP += 8; 
+					break; 
+					}
+				case("Inline 4"): 
+					{
+					XP += 8; 
+					break; 
+					}
+				case("Boxer"): 
+					{
+					XP += 8; 
+					break; 
+					}
+				case("V12"): 
+					{
+					XP += 5; 
+					break; 
+					}
+				case("V10"): 
+					{
+					XP += 5; 
+					break; 
+					}
+				}
+			
+			}
+		}
 	@Override
 	public void whatMake() 
 		{
@@ -130,12 +225,50 @@ public class Performance extends Car
 		if(make.equals("BMW") || make.equals("Audi")) 
 			{
 			System.out.println("V8");
-			System.out.println("Strait Six");
+			System.out.println("Straight Six");
 			System.out.println("V6");
 			System.out.println("Inline 4");
 			System.out.println("Boxer");
 			String myEngineBA = scanner.next();
-			engine = myEngineBA; 
+			engine = myEngineBA;
+			switch(myEngineBA) 
+				{
+				case("V8"): 
+					{
+					turbo(); 
+					System.out.println("Plus 25xp");
+					XP += 5; 
+					break; 
+					}
+				case("Straight Six"): 
+					{
+					turbo(); 
+					System.out.println("Plus 20xp");
+					XP += 10; 
+					break; 
+					}
+				case("V6"): 
+					{
+					turbo(); 
+					System.out.println("Plus 10xp");
+					XP += 10; 
+					break; 
+					}
+				case("Inline 4"): 
+					{
+					turbo(); 
+					System.out.println("Plus 15xp");
+					XP += 15; 
+					break; 
+					}
+				case("Boxer"): 
+					{
+					turbo(); 
+					System.out.println("Plus 15xp");
+					XP += 15; 
+					break; 
+					}
+				}
 			}
 		else if(make.equals("Lamborghini") || make.equals("Ferrari")) 
 			{
@@ -143,8 +276,36 @@ public class Performance extends Car
 			System.out.println("V10");
 			System.out.println("V8");
 			String myEngineLF = scanner.next(); 
-			engine = myEngineLF; 
+			engine = myEngineLF;
+			switch(myEngineLF) 
+				{
+				case("V12"): 
+					{
+					turbo(); 
+					System.out.println("Plus 5xp");
+					XP += 5; 
+					break; 
+					}
+				case("V10"): 
+					{
+					turbo(); 
+					System.out.println("Plus 10xp");
+					XP += 10; 
+					break; 
+					}
+				case("V8"): 
+					{
+					turbo(); 
+					System.out.println("Plus 15xp");
+					XP += 15; 
+					break; 
+					}
+				}
 			}
+		}
+	public void whatWheels() 
+		{
+		
 		}
 
 	}
