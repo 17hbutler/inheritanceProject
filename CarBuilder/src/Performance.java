@@ -4,13 +4,19 @@ public class Performance extends Car
 	@Override
 	public void whatType() 
 		{
-		System.out.println("What type of car do you want to build. Performance, Utility, Standard.");
-		Scanner scanner = new Scanner(System.in); 
-		String answer = scanner.next(); 
-	
-		if(answer.equalsIgnoreCase("Performance")) 
+		try 
 			{
-			makePerformance();
+			System.out.println("What type of car do you want to build. Performance, Utility, Standard.");
+			Scanner scanner = new Scanner(System.in); 
+			String answer = scanner.next(); 
+			if(answer.equalsIgnoreCase("Performance")) 
+				{
+				makePerformance();
+				}
+			}
+		catch(java.lang.NullPointerException exc) 
+			{
+			System.out.println("Opps...Check your spelling.");
 			}
 		}
 	@Override
@@ -34,6 +40,7 @@ public class Performance extends Car
 		System.out.println("Do you want your engine turbo charged or super charged.");
 		System.out.println("Turbo Charged input 1.");
 		System.out.println("Super Charged input 2.");
+		System.out.println("Neither input 0.");
 		Scanner scanner = new Scanner(System.in); 
 		String turbo = scanner.next();
 		if(turbo.equals("1")) 
@@ -79,7 +86,7 @@ public class Performance extends Car
 					}
 				}
 			}
-		else 
+		else if(turbo.equalsIgnoreCase("2")) 
 			{
 			System.out.println("Your " + make + " " + model + " is now supercharged");
 			isFaster = "supercharged";
@@ -122,6 +129,49 @@ public class Performance extends Car
 					}
 				}
 			
+			}
+		else 
+			{
+			System.out.println("Your " + make + " " + model + " is naturally aspirated.");
+			isFaster = "naturally aspirated"; 
+			switch(engine) 
+				{
+				case("V8"): 
+					{
+					XP += 20; 
+					break; 
+					}
+				case("Straight Six"): 
+					{
+					XP += 15; 
+					break; 
+					}
+				case("V6"): 
+					{
+					XP += 8; 
+					break; 
+					}
+				case("Inline 4"): 
+					{
+					XP += 5; 
+					break; 
+					}
+				case("Boxer"): 
+					{
+					XP += 5; 
+					break; 
+					}
+				case("V12"): 
+					{
+					XP += 20; 
+					break; 
+					}
+				case("V10"): 
+					{
+					XP += 20; 
+					break; 
+					}
+				}
 			}
 		}
 	@Override
@@ -303,9 +353,47 @@ public class Performance extends Car
 				}
 			}
 		}
+	@Override
 	public void whatWheels() 
 		{
-		
+		System.out.println("PLease chose from the selection of wheels.");
+		System.out.println("1.Pirelli P-Zero");
+		System.out.println("2.Goodyear Eagle RS");
+		System.out.println("3.TOYO Proxes R888");
+		System.out.println("4.TOYO Proxes RS1");
+		Scanner scanner = new Scanner(System.in); 
+		String theWheels = scanner.next(); 
+		switch(theWheels) 
+			{
+			case("1"): 
+				{
+				System.out.println("Plus 20xp.");
+				XP += 20;
+				wheels = theWheels; 
+				break; 
+				}
+			case("2"): 
+				{
+				System.out.println("Plus 20xp.");
+				XP += 20;
+				wheels = theWheels; 
+				break; 
+				}
+			case("3"): 
+				{
+				System.out.println("Plus 15xp.");
+				XP += 15;
+				wheels = theWheels;
+				break; 
+				}
+			case("4"):
+				{
+				System.out.println("Plus 20xp.");
+				XP += 20;
+				wheels = theWheels; 
+				break; 
+				}
+			}
 		}
 
 	}

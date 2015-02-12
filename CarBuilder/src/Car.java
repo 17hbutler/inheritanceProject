@@ -10,6 +10,7 @@ public abstract class Car
 	protected static String engine;
 	protected static int XP = 0; 
 	protected static String isFaster; 
+	protected static String toCar; 
 	
 	public void whatType() 
 		{
